@@ -1,0 +1,22 @@
+@use "./typography.scss" as *;
+@use "./variables.scss" as *;
+
+ul {
+  list-style-type: none;
+}
+
+.bold {
+  font-weight: $font-weight-bold;
+}
+
+.demi {
+  font-weight: $font-weight-demi;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 2rem;
+}

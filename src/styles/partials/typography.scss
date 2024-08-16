@@ -1,0 +1,29 @@
+@font-face {
+  font-family: "AvenirNextLTPro";
+  src: url("../../../src/assets/fonts/AvenirNextLTPro-Regular.otf") format("opentype"),
+    url("../../src/assets/fonts/AvenirNextLTPro.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "AvenirNextLTPro";
+  src: url("../../../src/assets/fonts/AvenirNextLTPro-Demi.otf") format("opentype"),
+    url("../../../src/assets/fonts/AvenirNextLTProDemi.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "AvenirNextLTPro";
+  src: url("../../../src/assets/fonts/AvenirNextLTPro-Bold.otf") format("opentype"),
+    url("../../../src/assets/fonts/AvenirNextLTProBold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+$font-family-primary: "AvenirNextLTPro", sans-serif;
+
+$font-weight-bold: 700;
+$font-weight-demi: 600;
+$font-weight-normal: 400;

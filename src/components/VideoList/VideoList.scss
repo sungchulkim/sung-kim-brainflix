@@ -1,0 +1,15 @@
+.video-list {
+  
+  width: 100%;
+  border: solid 1px orange;
+
+  &__heading {
+    text-transform: uppercase;
+  }
+
+  &__poster {
+    border-radius: 1rem;
+    cursor: pointer;
+    width: 100%;
+  }
+}

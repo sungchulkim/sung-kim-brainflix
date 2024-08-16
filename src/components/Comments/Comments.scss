@@ -1,0 +1,55 @@
+.comment {
+  &__container {
+    // border: 1px solid orange;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  &__comment-input {
+    // margin-bottom: 2rem;
+    // padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    // width: 100%;
+    // background-color: $color-light-background;
+    // font-family: $font-family-primary;
+    font-size: 1rem;
+    // color: $color-bandsite-black;
+    height: 3rem;
+  }
+
+  &__form-photo {
+    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+    // @include to-rem(height, 80px);
+    // @include to-rem(width, 80px);
+    object-fit: cover;
+  }
+
+  &__button[type="submit"] {
+    background-color: #0095ff;
+    color: #fff;
+    // @include to-rem(padding-top, 10px);
+    // @include to-rem(padding-bottom, 10px);
+    // @include to-rem(padding-left, 20px);
+    // @include to-rem(padding-right, 20px);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    height: 3rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    // @include to-rem(font-size, 28px);
+
+    // @include desktop {
+    //   width: 40%;
+
+    // }
+
+    &:hover {
+      background-color: #444;
+    }
+  }
+}

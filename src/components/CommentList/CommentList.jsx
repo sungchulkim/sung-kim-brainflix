@@ -1,5 +1,5 @@
 import './CommentList.scss'
-import commentImg from '../../assets/images/Mohan-muruge.jpg'
+import commentImg from '../../assets/images/grayPhoto.png'
 
 const CommentList = ({ comments }) => {
 

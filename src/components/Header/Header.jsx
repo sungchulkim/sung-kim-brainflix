@@ -9,6 +9,7 @@ const Header = () => {
         <>
             <div className="header__container">
                 <img className='header__logo' src={headerLogo} alt="The company logo of BrainFlix" />
+
                 <div className="header__inner-container">
                     <div className="header__input-wrapper">
                         <input className='header__search-input demi' type="text" name="" id="" placeholder='Search' />
@@ -16,6 +17,7 @@ const Header = () => {
                     </div>
                     <img className='header__img' src={headerImg}></img>
                 </div>
+                
                 <button type='submit' className='header__button bold'> <img src={uploadIcon} alt="upload icon" /> Upload</button>
                 <img className='header__img hide-mobile' src={headerImg}></img>
             </div>

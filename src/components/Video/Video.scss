@@ -6,17 +6,12 @@
 .video {
   &__container {
     display: flex;
-    padding-left: 1.5rem;
-    padding-right: 1rem;
     padding-bottom: 1rem;
   }
-  // max-width: 300px;
-  // width: 30%;
 
   &__poster {
     border-radius: 0.4rem;
     cursor: pointer;
-    // width: 100%;
     max-height: 6rem;
   }
 
@@ -28,8 +23,4 @@
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
   }
-
-  // &__title {
-  //   padding-bottom: 1rem;
-  // }
 }

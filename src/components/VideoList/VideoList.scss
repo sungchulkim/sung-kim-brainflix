@@ -4,19 +4,23 @@
 @use '../src/styles/partials/typography.scss' as *;
 
 .video-list {  
-  width: 100%;
+  padding-left: 1.5rem;
+
+  @include tablet {
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
 
   &__heading {
     text-transform: uppercase;
     color: $Silver;
-    padding-left: 1.5rem;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    width: 100%;
   }
 
   &__list {
-    // padding-left: 1.5rem;
     cursor: pointer;
-    
+    width: 100%;
   }
 }

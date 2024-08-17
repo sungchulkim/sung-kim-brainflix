@@ -1,0 +1,27 @@
+@use "../src/styles/partials/global.scss" as *;
+@use "../src/styles/partials/mixins.scss" as *;
+@use "../src/styles/partials/variables.scss" as *;
+@use "../src/styles/partials/typography.scss" as *;
+
+.selected-video {
+  &__video-screen {
+    max-width: 100%;
+    height: auto;
+
+    @include tablet {
+      max-width: 100%;
+      height: auto;
+      padding-left: 5vw;
+      padding-right: 5vw;
+      background-color: black;
+    }
+
+    @include desktop {
+      max-width: 100%;
+      height: auto;
+      padding-left: 16.65%;
+      padding-right: 16.65%;
+      background-color: black;
+    }
+  }
+}

@@ -1,9 +1,5 @@
 import './Video.scss'
 
-
-
-
-
 const Video = ({ videoData, setSelectedVideo }) => {
     const handleVideoClick = (video) => {
         setSelectedVideo(video)
@@ -12,7 +8,6 @@ const Video = ({ videoData, setSelectedVideo }) => {
 
     return (
         <>
-
             <li className="video" onClick={() => handleVideoClick(videoData)}>
                 <div className="video__container">
                     <img

@@ -5,8 +5,6 @@ import Header from './components/Header/Header'
 import Comments from './components/Comments/Comments'
 import VideoList from './components/VideoList/VideoList'
 import SelectedVideo from './components/SelectedVideo/SelectedVideo'
-// import Video from './components/Video/Video'
-
 
 function App() {
   const [selectedVideo, setSelectedVideo] = useState(videoData[0])

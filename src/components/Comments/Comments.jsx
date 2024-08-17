@@ -1,13 +1,12 @@
 import './Comments.scss'
 import commentImg from '../../assets/images/Mohan-muruge.jpg'
-// import headerLogo from '../../assets/logo/BrainFlix-logo.svg'
 
 const Comments = () => {
     return (
         <>
             <div className="comment">
                 <div className="comment__container">
-                    <h3>numberComments Comments</h3>
+                    <h3>3 Comments</h3>
                     <div className="comment__form-container">
                         <img className="comment__form-photo" src={commentImg} alt="Photo of a user" />
                         <form id="comment__form" action="">

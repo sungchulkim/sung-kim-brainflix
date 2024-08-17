@@ -1,12 +1,85 @@
-@use '../src/styles/partials/mixins.scss' as *;
+@use "../src/styles/partials/global.scss" as *;
+@use "../src/styles/partials/mixins.scss" as *;
+@use "../src/styles/partials/variables.scss" as *;
+@use "../src/styles/partials/typography.scss" as *;
 
 .selected-video {
-    &__video-screen {
-        max-width: 100vw;
-        text-align: center;
+  &__container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
 
-        @include desktop {
-            width: 66.6%; // adjust later after container width change
-        }
+  &__video-screen {
+    max-width: 100vw;
+    text-align: center;
+
+    @include desktop {
+      width: 66.6%; // adjust later after container width change
     }
+  }
+
+  &__title {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    //   padding-left: 1.5rem;
+    //   padding-right: 1.5rem;
+  }
+
+  &__details-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__inner-details-container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    flex-grow: 1;
+  }
+
+  &__by {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  &__date {
+    color: $Silver;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  &__inner-details-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  &__icons {
+    height: 1.2rem;
+    padding-right: 1rem;
+    // padding-top: 0.5rem;
+    // padding-bottom: 0.5rem;
+  }
+
+  &__view {
+    color: $Silver;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  &__like {
+    color: $Silver;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  &__description {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    line-height: $font-line-height;
+  }
+}
+
+hr {
+    color: $Mercury;
 }

@@ -1,15 +1,22 @@
-.video-list {
-  
+@use '../src/styles/partials/global.scss' as *;
+@use '../src/styles/partials/mixins.scss' as *;
+@use '../src/styles/partials/variables.scss' as *;
+@use '../src/styles/partials/typography.scss' as *;
+
+.video-list {  
   width: 100%;
-  border: solid 1px orange;
 
   &__heading {
     text-transform: uppercase;
+    color: $Silver;
+    padding-left: 1.5rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
   }
 
-  &__poster {
-    border-radius: 1rem;
+  &__list {
+    // padding-left: 1.5rem;
     cursor: pointer;
-    width: 100%;
+    
   }
 }

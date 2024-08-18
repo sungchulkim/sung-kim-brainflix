@@ -4,15 +4,24 @@
 @use "../src/styles/partials/typography.scss" as *;
 
 .comment-list {
-  &__container {
-    border: solid 1px transparent;
+  &__outer-container {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
-    
+
     @include tablet {
       padding-left: 5vw;
       padding-right: 5vw;
     }
+    
+    @include desktop {
+      border-top: 1px solid $Silver;
+      padding-left: 0;
+      padding-right: 1rem;
+    }
+  }
+  
+  &__container {
+    border: solid 1px transparent;
   }
 
   &__comment-container {
@@ -30,9 +39,7 @@
     background-color: #ccc;
     object-fit: cover;
     margin-right: 1.5rem;
-  }
-
-  
+  }  
 
   &__outer-wrapper {
     border: solid 1px transparent;

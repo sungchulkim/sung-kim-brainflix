@@ -3,16 +3,14 @@ import viewIconViews from './../../assets/icons/views.svg'
 import viewIconLikes from './../../assets/icons/Likes.svg'
 
 const SelectedVideo = ({ video }) => {
-    // console.log({ video })
 
     return (
         <>
-            {/* <video className="selected-video__video-screen" poster={video.image} controls></video> */}
             <div className='selected-video' id='selected-video'>
                 
                 <div className='selected-video__container'>
                     <h1 className="selected-video__title">{video.title}</h1>
-                    <hr className="hr" />
+                    <hr className="hr-upper" />
 
                     <div className="selected-video__details-container">
 

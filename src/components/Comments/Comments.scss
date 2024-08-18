@@ -12,15 +12,17 @@
     padding-right: 5vw;
   }
 
+  @include desktop {
+    padding-left: 0;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+  }
+
   &__counts {
     margin-bottom: 1.5rem;
   }
 
-  // &__container {
-    
-  // }
-
-  &__form-container {
+  &__container {
     display: flex;
     flex-direction: row;
   }
@@ -36,6 +38,41 @@
 
   &__form-wrapper {
     width: 100%;
+
+    @include tablet {
+      display: inline;
+    }
+
+    @include desktop {
+      display: inline-block;
+    }
+  }
+
+  &__form {
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      align-items: end;
+    }
+
+    @include desktop {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      align-items: end;
+    }
+  }
+
+  &__inner-wrapper {
+    
+    @include tablet {
+      flex-grow: 1;
+    }
+
+    @include desktop {
+      flex-grow: 1;
+    }
   }
 
   &__heading {
@@ -55,6 +92,22 @@
     height: 8rem;
     width: 100%;
     background-color: #fafafa;
+
+    @include tablet {
+      height: 3rem;
+      padding-top: 0;
+      margin-bottom: 0;
+    }
+
+    @include desktop {
+      height: 3rem;
+      padding-top: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  &__button-wrapper {
+    position: relative;
   }
 
   &__button[type="submit"] {
@@ -68,14 +121,36 @@
     font-size: 1rem;
     text-transform: uppercase;
 
+    @include tablet {
+      width: 20vw;
+      margin-bottom: 0.4rem;
+    }
+
+    @include desktop {
+      width: 15vw;
+      margin-bottom: 0.4rem;
+    }
+
     &:hover {
       background-color: #444;
     }
   }
 
+  &__add-icon {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+
   &__hr {
     margin-top: 1rem;
-    // margin-bottom: 1rem;
     color: $Mercury;
+
+    @include desktop {
+      display: none;
+    }
   }
 }

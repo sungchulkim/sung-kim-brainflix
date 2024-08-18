@@ -17,8 +17,12 @@ const Header = () => {
                     </div>
                     <img className='header__img' src={headerImg}></img>
                 </div>
-                
-                <button type='submit' className='header__button bold'> <img src={uploadIcon} alt="upload icon" /> Upload</button>
+
+                <div className="header__button-wrapper">
+                    <button type='submit' className='header__button bold'> <img className="header__upload-icon" src={uploadIcon} alt="upload icon" /> Upload</button>
+                </div>
+
+
                 <img className='header__img hide-mobile' src={headerImg}></img>
             </div>
         </>

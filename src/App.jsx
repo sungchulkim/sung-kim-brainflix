@@ -12,34 +12,21 @@ function App() {
   const [selectedVideo, setSelectedVideo] = useState(videoData[0])
   const filteredVideoList = videoData.filter(video => video.id !== selectedVideo.id)
 
-  // console.log(selectedVideo.title)
-  // console.log(videoData[8])
-  // console.log(filteredVideoList[2])
-  // console.log(selectedVideo.comments[1].name)
-
-
   return (
     <>
       <Header />
       <main className="main">
         <SelectedVideoScreen video={selectedVideo} />
-
-
         <div className="main__container">
-
           <div className="main__left-wrapper">
             <SelectedVideo video={selectedVideo} />
             <Comments comments={selectedVideo.comments} />
             <CommentList comments={selectedVideo.comments} />
           </div>
-
           <div className="main__right-wrapper">
             <VideoList video={filteredVideoList} setSelectedVideo={setSelectedVideo} />
           </div>
-
         </div>
-
-        
       </main>
     </>
   )

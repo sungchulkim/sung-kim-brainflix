@@ -7,43 +7,31 @@
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 
-  &__video-screen {
-    max-width: 100%;
-    height: auto;
-
-    @include tablet {
-      max-width: 100%;
-      height: auto;
-      padding-left: 5vw;
-      padding-right: 5vw;
-      background-color: black;
-    }
-
-    @include desktop {
-      max-width: 100%;
-      height: auto;
-      padding-left: 16.65%;
-      padding-right: 16.65%;
-      background-color: black;
-    }
-  }
-
   @include tablet {
     padding-left: 5vw;
     padding-right: 5vw;
   }
 
   @include desktop {
-    padding-left: 5vw;
-    padding-right: 5vw;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   &__container {
+    border: 1px solid transparent;
   }
 
   &__title {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
+
+    @include tablet {
+      padding-bottom: 0;
+    }
+
+    @include desktop {
+      padding-bottom: 0;
+    }
   }
 
   &__details-container {
@@ -60,7 +48,6 @@
 
     @include tablet {
       flex-direction: row;
-      // justify-content: space;
     }
 
     @include desktop {
@@ -78,11 +65,13 @@
     @include tablet {
       flex-direction: row;
       justify-content: flex-end;
+      padding-right: 1rem;
     }
 
     @include desktop {
       flex-direction: row;
       justify-content: flex-end;
+      padding-right: 1rem;
     }
   }
 
@@ -151,9 +140,29 @@
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
     line-height: 1.8rem;
+
+    @include tablet {
+      padding-right: 1rem;
+    }
+
+    @include desktop {
+      padding-right: 1rem;
+    }
   }
 }
 
-hr {
+.hr {
   color: $Mercury;
+
+  &-upper {
+    @include tablet {
+      display: none;
+    }
+
+    @include desktop {
+      display: none;
+    }
+  }
 }
+
+

@@ -19,11 +19,26 @@ html {
 }
 
 .main {
-
   &__container {
-
     @include desktop {
       display: flex;
+      padding-left: 10vw;
+      padding-right: 10vw;
     }
   }
+  
+  &__left-wrapper {
+    @include desktop {
+    border: 1px solid transparent;
+    width: 60vw;
+    }
+  }
+
+  &__right-wrapper {
+    @include desktop {
+    border: solid 1px transparent;
+    width: 30vw;
+    }
+  }
+
 }

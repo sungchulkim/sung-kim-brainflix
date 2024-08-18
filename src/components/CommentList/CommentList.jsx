@@ -5,6 +5,7 @@ const CommentList = ({ comments }) => {
 
     return (
         <>
+            <div className="comment-list__outer-container">
                 {comments.map((comment) => (
 
                     <div key={comment.id} className="comment-list__container">
@@ -18,12 +19,13 @@ const CommentList = ({ comments }) => {
                                 </div>
                                 <p className='comment-list__comment'>{comment.comment}</p>
                             </div>
-                            
+
                         </div>
                         <hr className="comments__hr" />
                     </div>
 
-                ))}            
+                ))}
+            </div>
         </>
     )
 }

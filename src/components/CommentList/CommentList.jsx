@@ -2,6 +2,7 @@ import './CommentList.scss'
 import commentImg from '../../assets/images/grayPhoto.png'
 
 const CommentList = ({ comments }) => {
+    console.log("comments :", {comments})
 
     return (
         <>

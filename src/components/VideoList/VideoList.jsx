@@ -1,14 +1,16 @@
 import './VideoList.scss'
 import Video from '../Video/Video'
 
-const VideoList = ({ video, setSelectedVideo }) => {
+const VideoList = ({ video }) => {
+    console.log("filteredVideoList:", video)   
+
     return (
         <>
             <section className='video-list'>
                 <h3 className='video-list__heading demi'>Next Videos</h3>
                 <ul className='video-list__list'>
                     {video.map((video) =>
-                        <Video videoData={video} setSelectedVideo={setSelectedVideo} key={video.id} />
+                        <Video video={video} key={video.id} />
                     )}
                 </ul>
             </section>

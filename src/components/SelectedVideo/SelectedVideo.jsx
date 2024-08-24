@@ -3,7 +3,6 @@ import viewIconViews from './../../assets/icons/views.svg'
 import viewIconLikes from './../../assets/icons/Likes.svg'
 
 const SelectedVideo = ({ video }) => {
-
     return (
         <>
             <div className='selected-video' id='selected-video'>

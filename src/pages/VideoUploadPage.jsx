@@ -1,9 +1,12 @@
 import './VideoUploadPage.scss'
+import Header from '../components/Header/Header'
+import UploadVideo from '../components/UploadVideo/UploadVideo'
 
 function VideoUploadPage() {
     return (
         <>
-            <h1>Video Upload Page</h1>
+            <Header />
+            <UploadVideo />
         </>
     )
 }

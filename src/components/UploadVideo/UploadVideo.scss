@@ -1,0 +1,144 @@
+@use "../src/styles/partials/global.scss" as *;
+@use "../src/styles/partials/mixins.scss" as *;
+@use "../src/styles/partials/variables.scss" as *;
+@use "../src/styles/partials/typography.scss" as *;
+
+.upload-video {
+  &__container {
+    border-top: solid 1px $Mercury;
+    display: flex;
+    padding-left: 1.5rem;
+  }
+
+  &__form {
+    border: 1px solid transparent;
+  }
+
+  &__heading {
+    color: $brainflix-black;
+    font-size: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  &__hr {
+    display: none;
+  }
+
+  &__thumbnail-input-container {
+    border: 1px solid transparent;
+  }
+
+  &__thumbnail-container {
+    border: 1px solid transparent;
+  }
+
+  &__thumbnail-title {
+    color: $Silver;
+    font-size: 1rem;
+    text-transform: uppercase;
+    padding-bottom: 0.5rem;
+  }
+
+  &__thumbnail-image {
+    width: 100vw;
+    border-radius: 0.3rem;
+  }
+
+  &__input-container {
+    border: 1px solid transparent;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title-label {
+    color: $Silver;
+    text-transform: uppercase;
+    padding-top: 1.3rem;
+    padding-bottom: 0.5rem;
+  }
+
+  &__title-input {
+    font-size: 1rem;
+    font-family: $font-family-primary;
+    height: 3rem;
+    border-radius: 5px;
+    border: solid 1px $Mercury;
+    background-color: #fafafa;
+    font-size: 1rem;
+    padding-left: 1rem;
+  }
+
+  &__description-label {
+    color: $Silver;
+    text-transform: uppercase;
+    padding-top: 1.3rem;
+    padding-bottom: 0.5rem;
+  }
+
+  &__description-input {
+    font-size: 1rem;
+    font-family: $font-family-primary;
+    height: 7rem;
+    border-radius: 5px;
+    border: solid 1px $Mercury;
+    background-color: #fafafa;
+    font-size: 1rem;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  &__button-container {
+    border: 1px solid transparent;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__button-wrapper {
+    position: relative;
+  }
+
+  &__button-submit {
+    background-color: #0095ff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 3rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    width: 100%;
+
+    &:hover {
+      background-color: #444;
+    }
+  }
+
+  &__publish-icon {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+
+  &__button-cancel {
+    background-color: white;
+    color: #0095ff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 3rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+    &:hover {
+      background-color: #444;
+    }
+  }
+}

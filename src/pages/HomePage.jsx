@@ -8,7 +8,7 @@ import VideoList from '../components/VideoList/VideoList.jsx'
 import SelectedVideo from '../components/SelectedVideo/SelectedVideo.jsx'
 // import CommentList from './components/CommentList/CommentList'
 import SelectedVideoScreen from '../components/SelectedVideoScreen/SelectedVideoScreen.jsx'
-import { API_KEY, API_URL, endpointVideo } from './util.js'
+import { API_KEY, API_URL, endpointVideos } from './util.js'
 import axios from 'axios'
 // import SelectedVideo from '../components/SelectedVideo/SelectedVideo.jsx'
 
@@ -21,7 +21,7 @@ function HomePage() {
     const filteredVideoList = videos.filter(video => video.id !== selectedVideo.id)
 
     const getVideos = async () => {
-        const results = await axios.get(`${API_URL}${endpointVideo}${API_KEY}`)
+        const results = await axios.get(`${API_URL}${endpointVideos}${API_KEY}`)
         const videos = results.data
         console.log(videos)
         setVideos(videos)
@@ -44,7 +44,7 @@ function HomePage() {
         return (
             <>
                 <Header />
-                <main className='loading' >Loading...</main>
+                <main className='loading' >Loading...✨</main>
             </>
         )
     }

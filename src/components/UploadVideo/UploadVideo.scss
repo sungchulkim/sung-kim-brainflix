@@ -7,7 +7,18 @@
   &__container {
     border-top: solid 1px $Mercury;
     display: flex;
+    padding-right: 1.5rem;
     padding-left: 1.5rem;
+
+    @include tablet {
+      padding-left: 5vw;
+      padding-right: 5vw;
+    }
+
+    @include desktop {
+      padding-left: 10vw;
+      padding-right: 10vw;
+    }
   }
 
   &__form {
@@ -23,14 +34,41 @@
 
   &__hr {
     display: none;
+    border-color: $Silver;
+
+    @include tablet {
+      display: block;
+      border-color: $Mercury;
+    }
+
+    @include desktop {
+      display: block;
+      border-color: $Mercury;
+    }
   }
 
   &__thumbnail-input-container {
-    border: 1px solid transparent;
+    // background-color: yellowgreen;
+
+    @include desktop {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 2rem;
+      align-items: center;
+      // border: 1px solid yellowgreen;
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      width: 80vw;
+    }
   }
 
   &__thumbnail-container {
     border: 1px solid transparent;
+
+    @include tablet {
+      width: 50%;
+    }
   }
 
   &__thumbnail-title {
@@ -38,17 +76,35 @@
     font-size: 1rem;
     text-transform: uppercase;
     padding-bottom: 0.5rem;
+
+    @include tablet {
+      padding-top: 2rem;
+    }
   }
 
   &__thumbnail-image {
-    width: 100vw;
+    width: 100%;
     border-radius: 0.3rem;
+
+    @include tablet {
+      
+      
+    }
+    
+    @include desktop {
+      width: auto;
+      height: 13rem;
+    }
   }
 
   &__input-container {
     border: 1px solid transparent;
     display: flex;
     flex-direction: column;
+
+    @include desktop {
+      width: 66.6%;
+    }
   }
 
   &__title-label {
@@ -93,6 +149,16 @@
     border: 1px solid transparent;
     display: flex;
     flex-direction: column;
+
+    @include tablet {
+      flex-direction: row-reverse;      
+      align-items: center;
+    }
+
+    @include desktop {
+      flex-direction: row-reverse;      
+      align-items: center;
+    }
   }
 
   &__button-wrapper {
@@ -112,6 +178,14 @@
 
     &:hover {
       background-color: #444;
+    }
+
+    @include tablet {
+      width: 20vw;
+    }
+
+    @include desktop {
+      width: 15vw;
     }
   }
 
@@ -139,6 +213,16 @@
 
     &:hover {
       background-color: #444;
+    }
+
+    @include tablet {
+      width: 20vw;
+      margin-right: 2rem;
+    }
+
+    @include desktop {
+      width: 15vw;
+      margin-right: 2rem;
     }
   }
 }

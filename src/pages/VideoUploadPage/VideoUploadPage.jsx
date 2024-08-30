@@ -1,6 +1,6 @@
 import './VideoUploadPage.scss'
-import Header from '../components/Header/Header'
-import UploadVideo from '../components/UploadVideo/UploadVideo'
+import Header from '../../components/Header/Header'
+import UploadVideo from '../../components/UploadVideo/UploadVideo'
 
 function VideoUploadPage() {
     return (

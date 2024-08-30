@@ -1,12 +1,29 @@
 import './UploadVideo.scss'
-import { Link } from 'react-router-dom'
+import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import thumbImg from '../../assets/images/Upload-video-preview.jpg'
 import publishIcon from '../../assets/icons/publish.svg'
 
 const UploadVideo = () => {
+    const [isUploading, setIsUploading] = useState(false);
+    const navigate = useNavigate();
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        
+        setIsUploading(true);
+        setTimeout(() => {
+            navigate('/');
+        }, 1000); 
+    };
+
+    if (isUploading) {
+        return <main className='loading'>Uploading your video...</main>;
+    }
+
     return (
         <div className="upload-video__container">
-            <form className='upload-video__form' action="">
+            <form className='upload-video__form' action="" onSubmit={handleSubmit}>
                 <h1 className='upload-video__heading'>Upload Video</h1>
                 <hr className="upload-video__hr" />
                 <div className="upload-video__thumbnail-input-container">
@@ -24,9 +41,7 @@ const UploadVideo = () => {
                 <hr className="upload-video__hr" />
                 <div className="upload-video__button-container">
                     <div className="upload-video__button-wrapper">
-                        <Link to="/upload">
-                            <button className='upload-video__button-submit demi' type="submit"> <img className="upload-video__publish-icon" src={publishIcon} alt="publish icon" /> Publish</button>
-                        </Link>
+                            <button className='upload-video__button-submit demi' type="submit"> <img className="upload-video__publish-icon" src={publishIcon} alt="publish icon" type="button" onClick={() => navigate('/')}/> Publish</button>
                     </div>
                     <button className="upload-video__button-cancel demi">Cancel</button>
                 </div>

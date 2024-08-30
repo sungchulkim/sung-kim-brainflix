@@ -1,14 +1,13 @@
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
-import VideoDetailsPage from './VideoDetailsPage'
-import { API_KEY, API_URL } from './util.js'
+import VideoDetailsPage from '../../components/VideoDetailsPage/VideoDetailsPage.jsx'
+import { API_KEY, API_URL } from '../util.js'
 import axios from 'axios'
 
 function HomePage() {
     const { id } = useParams()
     const [videos, setVideos] = useState([])
     const [selectedVideo, setSelectedVideo] = useState(null)
-
 
     const getVideos = async () => {
         try {
@@ -28,7 +27,6 @@ function HomePage() {
         getVideos()
     }, [id])
 
-
     const getVideoDetails = async (videoId) => {
         try {
             const response = await axios.get(`${API_URL}/videos/${videoId}${API_KEY}`)
@@ -38,7 +36,6 @@ function HomePage() {
         }
     }
 
-
     useEffect(() => {
         if (id) {
             getVideoDetails(id)
@@ -46,13 +43,17 @@ function HomePage() {
     }, [id])
 
 
-
     if (!selectedVideo) {
-        return <div>Loading...</div>
+        return (
+            <>
+                <main className='loading'>Loading...</main>
+            </>
+        )
     }
 
+
     return (
-        <VideoDetailsPage selectedVideo={selectedVideo} videos={videos} />
+        <VideoDetailsPage selectedVideo={selectedVideo} videos={videos} id={id} />
     )
 }
 

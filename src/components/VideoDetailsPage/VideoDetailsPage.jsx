@@ -20,6 +20,7 @@ function VideoDetailsPage({selectedVideo, videos, id}) {
     }
 
     const filteredVideoList = videos.filter(video => video.id !== selectedVideo.id)
+    console.log("selectedVideo: ", selectedVideo)
 
     return (
         <>

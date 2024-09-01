@@ -225,6 +225,24 @@
       margin-right: 2rem;
     }
   }
+
+  &__success {
+    color: silver;
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  &__success-link-home {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 3rem;  
+  }
+
+  &__error {
+    font-size: 1.5rem;
+    color: red;
+    margin-top: 2rem;
+  }
 }
 
 .loading {

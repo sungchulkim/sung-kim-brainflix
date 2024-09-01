@@ -27,7 +27,6 @@ const Header = () => {
                     </Link>
                 </div>
 
-
                 <img className='header__img hide-mobile' src={headerImg}></img>
             </div>
         </>

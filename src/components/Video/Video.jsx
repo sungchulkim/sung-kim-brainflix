@@ -4,20 +4,20 @@ import { Link } from 'react-router-dom';
 import { API_URL, STATIC_PATH } from '../../pages/Util/util';
 
 const Video = ({ video, setSelectedVideo }) => {
-    // const [imageError, setImageError] = useState(false);
+    const [imageError, setImageError] = useState(false);
 
     const handleVideoClick = () => {
         setSelectedVideo(video);
         window.scrollTo(0, 0);
     };
 
-    // const handleImageError = () => {
-    //     setImageError(true);
-    // };
+    const handleImageError = () => {
+        setImageError(true);
+    };
 
-    // const imageSrc = imageError
-    //     ? `${API_URL}${STATIC_PATH}thumbnail-default.jpg`
-    //     : `${API_URL}${STATIC_PATH}${video.image}`;
+    const imageSrc = imageError
+        ? `${API_URL}${STATIC_PATH}thumbnail-default.jpg`
+        : `${API_URL}${STATIC_PATH}${video.image}`;
 
     return (
         <li className="video">
@@ -25,10 +25,9 @@ const Video = ({ video, setSelectedVideo }) => {
                 <Link to={`/videos/${video.id}`} onClick={handleVideoClick}>
                     <img
                         className='video__poster'
-                        src={video.image}
-                        // src={imageSrc}
+                        src={imageSrc}
                         alt={video.title}
-                        // onError={handleImageError}
+                        onError={handleImageError}
                     />
                 </Link>
                 <div className="video__inner-container">

@@ -48,24 +48,19 @@
   }
 
   &__thumbnail-input-container {
-    // background-color: yellowgreen;
-
     @include desktop {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      gap: 2rem;
+      gap: 1rem;
       align-items: center;
-      // border: 1px solid yellowgreen;
-      padding-top: 2rem;
-      padding-bottom: 2rem;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
       width: 80vw;
     }
   }
 
   &__thumbnail-container {
-    border: 1px solid transparent;
-
     @include tablet {
       width: 50%;
     }
@@ -79,6 +74,10 @@
 
     @include tablet {
       padding-top: 2rem;
+    }
+
+    @include desktop {
+      padding-top: 0;
     }
   }
 

@@ -14,7 +14,7 @@
   @include desktop {
     border-left: solid 1px $Silver;
     padding-bottom: 5rem;
-    padding-left: 1rem;
+    padding-left: 2rem;
     padding-right: 0;
   }
 
@@ -24,6 +24,10 @@
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
     width: 100%;
+
+    @include desktop {
+      padding-top: 2.5rem;
+    }
   }
 
   &__list {

@@ -37,6 +37,10 @@
   &__details-container {
     display: flex;
     justify-content: space-between;
+
+    @include desktop {
+      padding-bottom: 0;
+    }
   }
 
   &__inner-details-left-container {
@@ -137,7 +141,7 @@
   }
 
   &__description {
-    padding-top: 1.5rem;
+    padding-top: 2rem;
     padding-bottom: 1.5rem;
     line-height: 1.8rem;
 
@@ -152,7 +156,7 @@
 }
 
 .hr {
-  color: $Mercury;
+  color: $Alabaster;
 
   &-upper {
     @include tablet {
@@ -161,6 +165,8 @@
 
     @include desktop {
       display: none;
+      padding: 0;
+      margin: 0;
     }
   }
 }

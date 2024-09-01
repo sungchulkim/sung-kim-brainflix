@@ -4,44 +4,45 @@ import { NavLink } from 'react-router-dom'
 import thumbImg from '../../assets/images/Upload-video-preview.jpg'
 import publishIcon from '../../assets/icons/publish.svg'
 import axios from 'axios'
+import { API_URL } from '../../pages/Util/util'
 
 const UploadVideo = () => {
-    const [isUploading, setIsUploading] = useState(false);
+    const [isUploading, setIsUploading] = useState(false)
     const [title, setTitle] = useState('')
     const [description, setDescription] = useState('')
     const [error, setError] = useState('')
     const [isSubmitted, setIsSubmitted] = useState(false)
 
     const handleSubmit = async (e) => {
-        e.preventDefault();
+        e.preventDefault()
 
         if (!title.trim() || !description.trim()) {
-            setError('Title and description are required.');
-            return;
+            setError('Title and description are required.')
+            return
         }
 
-        setIsUploading(true);
-        setError('');
+        setIsUploading(true)
+        setError('')
 
         try {
-            const response = await axios.post('http://localhost:8080/videos', {
+            const response = await axios.post(`${API_URL}/videos`, {
                 title,
                 description
-            });
+            })
 
-            console.log('Video uploaded:', response.data);
-            setIsUploading(false);
-            setIsSubmitted(true);
+            console.log('Video uploaded:', response.data)
+            setIsUploading(false)
+            setIsSubmitted(true)
         } catch (error) {
-            console.error('Error uploading video:', error);
-            setError('Failed to upload video. Please try again.');
-            setIsUploading(false);
+            console.error('Error uploading video:', error)
+            setError('Failed to upload video. Please try again.')
+            setIsUploading(false)
         }
     };
 
 
     if (isUploading) {
-        return <main className='loading'>Uploading your video...</main>;
+        return <main className='loading'>Uploading your video...</main>
     }
 
 
@@ -50,13 +51,11 @@ const UploadVideo = () => {
             <div className="upload-success">
                 <p className='upload-video__success demi'>Video uploaded successfully!</p>
                 <NavLink to="/" >
-                <p className="upload-video__success-link-home demi">Return to Home</p>
-
+                    <p className="upload-video__success-link-home demi">Return to Home</p>
                 </NavLink>
             </div>
         );
     }
-
 
 
     return (
@@ -66,8 +65,10 @@ const UploadVideo = () => {
                 <hr className="upload-video__hr" />
 
 
+
                 {/* // error */}
                 {error && <p className="upload-video__error">{error}</p>}
+
 
 
                 <div className="upload-video__thumbnail-input-container">

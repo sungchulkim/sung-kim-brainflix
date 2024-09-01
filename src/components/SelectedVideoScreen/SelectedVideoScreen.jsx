@@ -1,33 +1,19 @@
-import { useState, useEffect } from 'react';
-import './SelectedVideoScreen.scss';
-import { API_URL, STATIC_PATH } from '../../pages/Util/util';
+import { useState, useEffect } from 'react'
+import './SelectedVideoScreen.scss'
+import { API_URL, STATIC_PATH } from '../../pages/Util/util'
 
 const SelectedVideoScreen = ({ video }) => {
-    const [posterSrc, setPosterSrc] = useState('');
+    const [posterSrc, setPosterSrc] = useState('')
 
     useEffect(() => {
-        const checkImage = async (url) => {
-            try {
-                const response = await fetch(url, { method: 'HEAD' });
-                return response.ok;
-            } catch (error) {
-                console.error('Error checking image:', error);
-                return false;
-            }
-        };
+        const originalUrl = `${API_URL}${STATIC_PATH}${video.image}`
+        const defaultUrl = `${API_URL}${STATIC_PATH}thumbnail-default.jpg`
 
-        const setAppropriateImage = async () => {
-            const originalUrl = `${API_URL}${STATIC_PATH}${video.image}`;
-            const imageExists = await checkImage(originalUrl);
-
-            setPosterSrc(imageExists
-                ? originalUrl
-                : `${API_URL}${STATIC_PATH}thumbnail-default.jpg`
-            );
-        };
-
-        setAppropriateImage();
-    }, [video.image]);
+        const img = new Image()
+        img.onload = () => setPosterSrc(originalUrl)
+        img.onerror = () => setPosterSrc(defaultUrl)
+        img.src = originalUrl
+    }, [video.image])
 
     return (
         <video
@@ -35,7 +21,7 @@ const SelectedVideoScreen = ({ video }) => {
             poster={posterSrc}
             controls
         />
-    );
-};
+    )
+}
 
-export default SelectedVideoScreen;
+export default SelectedVideoScreen

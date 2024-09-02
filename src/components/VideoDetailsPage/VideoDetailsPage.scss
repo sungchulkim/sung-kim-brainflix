@@ -1,0 +1,18 @@
+@use "../src/styles/partials/global.scss" as *;
+@use "../src/styles/partials/mixins.scss" as *;
+@use "../src/styles/partials/variables.scss" as *;
+@use "../src/styles/partials/typography.scss" as *;
+
+.main {
+    &__container {
+        border: 1px solid transparent;
+    }
+
+    &__left-wrapper {
+        border: 1px solid transparent;
+    }
+
+    &__right-wrapper {
+        border: 1px solid transparent;
+    }
+}

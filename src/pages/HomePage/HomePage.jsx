@@ -10,8 +10,8 @@ function HomePage() {
     const [videos, setVideos] = useState([])
     const [selectedVideo, setSelectedVideo] = useState(null)
     
-    console.log("videos: ", videos)    
-    console.log("id: ", id)
+    // console.log("videos: ", videos)    
+    // console.log("id: ", id)
 
     const getVideos = async () => {
         try {

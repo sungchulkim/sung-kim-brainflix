@@ -1,6 +1,7 @@
 // Express local API server with .json running locally
 export const API_URL = "http://localhost:8080"
 export const STATIC_PATH = "/images/"
+export const DEFAULT_VIDEO = "https://unit-3-project-api-0a5620414506.herokuapp.com/stream?api_key=0016b0d8-970b-4bb2-8791-72f00990f6b7"
 
 
 // Web API with the api_key

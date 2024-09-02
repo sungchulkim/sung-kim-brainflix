@@ -2,7 +2,7 @@ import './VideoList.scss'
 import Video from '../Video/Video'
 
 const VideoList = ({ video }) => {
-    console.log("filteredVideoList:", video)   
+    // console.log("filteredVideoList:", video)
 
     return (
         <>

@@ -34,16 +34,14 @@
 
   &__hr {
     display: none;
-    border-color: $Silver;
+    border-color: $Alabaster;
 
     @include tablet {
       display: block;
-      border-color: $Mercury;
     }
 
     @include desktop {
       display: block;
-      border-color: $Mercury;
     }
   }
 
@@ -52,7 +50,7 @@
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      gap: 1rem;
+      // gap: 1rem;
       align-items: center;
       padding-top: 1rem;
       padding-bottom: 1rem;
@@ -170,7 +168,7 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    height: 3rem;
+    height: 3.5rem;
     font-size: 1rem;
     text-transform: uppercase;
     width: 100%;
@@ -203,7 +201,7 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    height: 3rem;
+    height: 3.5rem;
     font-size: 1rem;
     text-transform: uppercase;
     width: 100%;
@@ -238,9 +236,17 @@
   }
 
   &__error {
-    font-size: 1.5rem;
-    color: red;
-    margin-top: 2rem;
+    font-size: 1rem;
+    color: orange;
+    
+
+    @include tablet {
+      margin-top: 1rem;
+    }
+
+    @include desktop {
+      margin-top: 1rem;
+    }
   }
 }
 

@@ -8,7 +8,7 @@ import CommentList from '../CommentList/CommentList.jsx'
 
 
 function VideoDetailsPage({selectedVideo, videos, id}) {
-    console.log(selectedVideo, videos, id)
+    
 
     if (!selectedVideo) {
         return (
@@ -20,7 +20,8 @@ function VideoDetailsPage({selectedVideo, videos, id}) {
     }
 
     const filteredVideoList = videos.filter(video => video.id !== selectedVideo.id)
-    console.log("selectedVideo: ", selectedVideo)
+    // console.log("selectedVideo: ", selectedVideo)
+    console.log("id: ", id)
 
     return (
         <>
